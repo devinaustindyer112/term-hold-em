@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Iinclude
-SRC = src/main.c src/deck.c
+SRC = src/main.c src/deck.c src/game.c src/player.c
 OBJ = $(SRC:.c=.o)
 EXEC = term-hold-em
 
