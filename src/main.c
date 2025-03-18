@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 
     Game game;
     init(&game);    
-    printGame(&game);
+    display(&game);
 
     return 0;
 }
