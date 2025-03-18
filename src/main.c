@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "deck.h"
+#include "game.h"
 
 // TODO: Create Makefile to help with running this puppy
 
@@ -18,35 +18,9 @@ int main(int argc, char *argv[]) {
     // Initialize the application
     printf("Game started yo!\n");
 
-    Deck d;
-    initialize_deck(&d);
-    Card c = draw_card(&d);
-    print_card(&c);
-    
-    shuffle_deck(&d);
-    c = draw_card(&d);
-    print_card(&c);
-
-    /*
-        term-hold-em {{game settings}}  
-        
-        what does a game need?
-        * Dealer
-        * Players
-        * Deck of cards
-        * Chips
-        * Game state
-
-        A game state needs to hold:
-        * Number of player
-        * Deck of cards 
-        * Buy in 
-        * Big blind
-
-        I can start with building a class for a deck of cards
-    
-        Create a REPL? 
-    */
+    Game game;
+    init(&game);
+    print(&game);
 
     return 0;
 }

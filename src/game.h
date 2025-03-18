@@ -19,13 +19,13 @@ typedef struct {
 
 typedef struct { 
     int player_count;
-    Player players[MAX_PLAYERS];
-    float button;
+    Player* players[MAX_PLAYERS];
+    int button;
     float big_blind;
     float small_blind;
     float pot;
-    float bet;
-    Deck deck;
+    float last_bet;
+    Deck* deck;
     Card cards[6];
 } Game;
 
@@ -38,8 +38,11 @@ void fold(Player player);
 
 // Dealer actions
 
-void init();
-void deal();
+void init(Game* game);
+void deal(Game* game);
+void print(Game* game);
+
+// No classes definitely makes this interesting.
 void flop();
 void turn();
 void end();
