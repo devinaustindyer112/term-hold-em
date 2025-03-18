@@ -19,8 +19,8 @@ int main(int argc, char *argv[]) {
     printf("Game started yo!\n");
 
     Game game;
-    init(&game);
-    print(&game);
+    init(&game);    
+    printGame(&game);
 
     return 0;
 }

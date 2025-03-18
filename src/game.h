@@ -40,7 +40,7 @@ void fold(Player player);
 
 void init(Game* game);
 void deal(Game* game);
-void print(Game* game);
+void display(Game* game);
 
 // No classes definitely makes this interesting.
 void flop();
