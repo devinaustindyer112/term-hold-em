@@ -8,9 +8,10 @@
 // we want to increase the cards. Card rankings may also be different. 
 
 #define MAX_PLAYERS 9
+#define MAX_NAME_SIZE 30
 
 typedef struct {
-    char* name;
+    char name[MAX_NAME_SIZE];
     float chips;
     Card cards[2];
     bool active;

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "game.h"
 
 // TODO: Enable configuring with options
@@ -6,7 +7,7 @@ void init() {
         Player player;
         player.active = 1;
         player.chips = 1000;
-        // TODO: Figure out how to convert int to string. 
-        player.name = i;
+        sprintf(player.name, "player%d", i);
     }
 }
+
