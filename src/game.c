@@ -6,7 +6,6 @@
 
 // TODO: Enable configuring with options
 void init(Game* game) {
-    Game game;
     game->big_blind = .10;
     game->small_blind = .05;
     game->button = 0;
@@ -37,7 +36,7 @@ void deal(Game* game) {
 
 void print(Game* game) {
     for(int i = 0; i < MAX_PLAYERS; i++) {
-        printf("%s %d\n", game->players[i]->name, game->players[i]->chips);
+        printf("%s %f\n", game->players[i]->name, game->players[i]->chips);
     }
 }
 
