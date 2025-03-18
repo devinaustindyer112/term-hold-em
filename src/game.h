@@ -1,6 +1,16 @@
 #ifndef GAME_H
 #define GAME_H
 
+// TODO:  Same of these values may need to be dynamic if possible. For example if
+// we want to increase the cards. Card rankings may also be different. 
+
+typedef struct {
+    char name[100];
+    float chips;
+    Card cards[2];
+    bool active;
+} Player;
+
 typedef struct { 
     int player_count;
     Player players[9]
@@ -9,23 +19,23 @@ typedef struct {
     float small_blind;
     float pot;
     float bet;
-    // Deck
-    // Cards - 6
+    Deck deck;
+    Card cards[6];
 } Game;
 
+// Player actions
+
+void call();
+void check();
+void bet(float amount);
+void fold(Player player);
+
+// Dealer actions
+
+void init();
+void deal();
+void flop();
+void turn();
+void end();
+
 #endif // GAME_H
-
-// Player actions:
-
-// Call
-// Check
-// Bet
-// Fold 
-
-// Dealer actions:
-
-// Init
-// Flop
-// Turn
-// River
-// End
