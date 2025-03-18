@@ -1,11 +1,16 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <stdbool.h>
+#include "deck.h"
+
 // TODO:  Same of these values may need to be dynamic if possible. For example if
 // we want to increase the cards. Card rankings may also be different. 
 
+#define MAX_PLAYERS 9
+
 typedef struct {
-    char name[100];
+    char* name;
     float chips;
     Card cards[2];
     bool active;
@@ -13,7 +18,7 @@ typedef struct {
 
 typedef struct { 
     int player_count;
-    Player players[9]
+    Player players[MAX_PLAYERS];
     float button;
     float big_blind;
     float small_blind;
